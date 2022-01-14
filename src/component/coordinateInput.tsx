@@ -119,6 +119,7 @@ export class CoordinateInput extends React.Component<CoordinateInputProps, Coord
 
         onChange({
           calculationType,
+          distance: Math.round((route.routes[0].distance / 1000) * 10 / 10),
           origin, 
           destination, 
           roadMap: route.routes[0].legs.map(
@@ -167,6 +168,7 @@ export class CoordinateInput extends React.Component<CoordinateInputProps, Coord
 
         onChange({
           calculationType,
+          distance: Math.round((route.routes[0].distance / 1000) * 10 / 10),
           origin: calculatedOrigin, 
           destination: calculatedDestination, 
           roadMap: route.routes[0].legs.map(
